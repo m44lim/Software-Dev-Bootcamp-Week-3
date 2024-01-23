@@ -1,0 +1,87 @@
+* {
+    font-size: 36px;
+}
+
+/* When using the @keyframes identifier make sure you insert all the animations you would like to be applied  */
+@keyframes animation1 {
+    from {
+        background-color: brown;
+    }
+
+    to {
+        background-color: blue;
+    }
+
+}
+
+.animationOne {
+    animation-name: animation1;
+
+    /* animation-duration - works in both seconds and milliseconds. */
+    animation-duration: 2s;
+
+    /* animation-fill-mode: backwards; */
+}
+
+/* When you want multiple states of colors during the animation transition you use percenatges. */
+/* You can use any CSS property here. */
+@keyframes animationTwo {
+    0% {
+        background-color: brown;
+    }
+
+    25% {
+        background-color: chartreuse;
+    }
+
+    50% {
+        background-color: darkmagenta;
+        /* border: 4px solid red; */
+    }
+
+    75% {
+        background-color: darkgreen;
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}
+
+.animationTwo {
+    animation-name: animation2;
+    animation-duration: 10s;
+    animation-delay: 3s;
+
+    /* This will show how many times an animation will apear/show */
+    /* Inserting a value (e.g. animation-iteraion-count: 2;) - that will iterate the animation twice */
+    animation-iteration-count: infinite;
+}
+
+/* Animation Three */
+@keyframes animation3 {
+    from {
+        /* Here we have used a negative percentage value in the animation so that this creates a transition which looks like the animation is coming into and out of the screen/viewport.*/
+        left: -100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.animationThree {
+    position: absolute;
+    /* This should have created a circle on the viewport. This is usually done by matching the value of the width to the height and then using border-radius. */
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 50%;
+    margin-top: 50px;
+    animation-name: animation3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+
+}

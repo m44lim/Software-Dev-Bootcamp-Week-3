@@ -1,0 +1,42 @@
+/* @keyframes - In this make sure the identifier is specified with the "animation-name: move;".*/
+@keyframes move {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 300px;
+    }
+
+    50% {
+        top: 300px;
+        left: 300px;
+    }
+
+    75% {
+        left: 0;
+        top: 300px;
+    }
+
+    100% {
+
+        top: 0;
+        left: 0;
+    }
+}
+
+.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: darkslateblue;
+
+    /* Animation-name - Ensure that the @ketfranes identifier is the exact same name as the one in the "animation-name: move;" as, 
+    if this is not the case then the animation will not run. */
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}

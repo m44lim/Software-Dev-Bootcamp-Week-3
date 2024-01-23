@@ -1,0 +1,94 @@
+* {
+    /* Doing this before the beginning of your css code you will allow all padding and margins to be set to 0 */
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    background-image: url('https://picsum.photos/seed/picsum/200/300');
+    /* height: 100vh; - refers to veiwport height  */
+    height: 100vh;
+    /* background-size: cover; - will ensure that the background image used above, to cover the entire page BUT you 
+    will lose some of tyhe image */
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+
+    /*  */
+    padding: 10px 0px;
+    background-color: purple;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+/* nav ul li{} - when you want to direct your CSS styling to a specific element that is repeated multiple times you can 
+use this formula to direct the styling to it */
+nav ul li {
+
+    /* list-style:none; - will remove the listing BULLET LIST style */
+    list-style: none;
+
+    /* THe difference between "inline-block" is that  */
+    display: inline-block;
+
+    /* This will add margin spacing on the left and right + NOTHING on the top and bottom */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+
+
+}
+
+.section_container {
+    display: grid;
+
+    /* 2fr 1fr; - Is basically like using ratio of 2:1 ( meaning that there si a atotal of 3 columns) */
+    grid-template-columns: 2fr 1fr;
+
+    /* 4rem - is basically 4 * 16px = 64px */
+    gap: 4rem;
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+
+    /* The Flex properties justify-content and flex-direction brings the content(image) to the center of the collumn */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.content h1 {
+    font-size: 60px;
+}
+
+.content p {
+    font-size: 25px;
+}
+
+.image {
+
+    place-items: center;
+}
+
+.image img {
+    max-width: 300px;
+    height: 300px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100vh;
+}
